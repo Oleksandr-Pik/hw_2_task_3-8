@@ -1,0 +1,121 @@
+User@Vinga-PC MINGW64 /d/Python/Python Developer/Git/Git_lesson_2/home_work_2
+$ mkdir task_3
+
+User@Vinga-PC MINGW64 /d/Python/Python Developer/Git/Git_lesson_2/home_work_2
+$ cd task_3/
+
+User@Vinga-PC MINGW64 /d/Python/Python Developer/Git/Git_lesson_2/home_work_2/task_3
+$ git init
+Initialized empty Git repository in D:/Python/Python Developer/Git/Git_lesson_2/home_work_2/task_3/.git/
+
+User@Vinga-PC MINGW64 /d/Python/Python Developer/Git/Git_lesson_2/home_work_2/task_3 (main)
+$ touch file1.py file2.py file3.py
+
+User@Vinga-PC MINGW64 /d/Python/Python Developer/Git/Git_lesson_2/home_work_2/task_3 (main)
+$ git add .
+
+User@Vinga-PC MINGW64 /d/Python/Python Developer/Git/Git_lesson_2/home_work_2/task_3 (main)
+$ git status
+On branch main
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   file1.py
+        new file:   file2.py
+        new file:   file3.py
+
+
+User@Vinga-PC MINGW64 /d/Python/Python Developer/Git/Git_lesson_2/home_work_2/task_3 (main)
+$ git commit -m "first commit"
+[main (root-commit) 2c43215] first commit
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 file1.py
+ create mode 100644 file2.py
+ create mode 100644 file3.py
+
+User@Vinga-PC MINGW64 /d/Python/Python Developer/Git/Git_lesson_2/home_work_2/task_3 (main)
+$ git checkout second_branch
+error: pathspec 'second_branch' did not match any file(s) known to git
+
+User@Vinga-PC MINGW64 /d/Python/Python Developer/Git/Git_lesson_2/home_work_2/task_3 (main)
+$ git checkout -b second_branch
+Switched to a new branch 'second_branch'
+
+User@Vinga-PC MINGW64 /d/Python/Python Developer/Git/Git_lesson_2/home_work_2/task_3 (second_branch)
+$ touch text1.txt text2.txt text3.txt text4.txt text5.txt
+
+User@Vinga-PC MINGW64 /d/Python/Python Developer/Git/Git_lesson_2/home_work_2/task_3 (second_branch)
+$ git add .
+
+User@Vinga-PC MINGW64 /d/Python/Python Developer/Git/Git_lesson_2/home_work_2/task_3 (second_branch)
+$ git commit -m "second commit"
+[second_branch d012c01] second commit
+ 5 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 text1.txt
+ create mode 100644 text2.txt
+ create mode 100644 text3.txt
+ create mode 100644 text4.txt
+ create mode 100644 text5.txt
+
+User@Vinga-PC MINGW64 /d/Python/Python Developer/Git/Git_lesson_2/home_work_2/task_3 (second_branch)
+$ git checkout main
+Switched to branch 'main'
+
+User@Vinga-PC MINGW64 /d/Python/Python Developer/Git/Git_lesson_2/home_work_2/task_3 (main)
+$ git merge second_branch
+Updating 2c43215..d012c01
+Fast-forward
+ text1.txt | 0
+ text2.txt | 0
+ text3.txt | 0
+ text4.txt | 0
+ text5.txt | 0
+ 5 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 text1.txt
+ create mode 100644 text2.txt
+ create mode 100644 text3.txt
+ create mode 100644 text4.txt
+ create mode 100644 text5.txt
+
+User@Vinga-PC MINGW64 /d/Python/Python Developer/Git/Git_lesson_2/home_work_2/task_3 (main)
+$ git branch
+* main
+  second_branch
+
+User@Vinga-PC MINGW64 /d/Python/Python Developer/Git/Git_lesson_2/home_work_2/task_3 (main)
+$ git branch -d second_branch
+Deleted branch second_branch (was d012c01).
+
+User@Vinga-PC MINGW64 /d/Python/Python Developer/Git/Git_lesson_2/home_work_2/task_3 (main)
+$ git branch
+* main
+
+User@Vinga-PC MINGW64 /d/Python/Python Developer/Git/Git_lesson_2/home_work_2/task_3 (main)
+$ git push origin main
+fatal: 'origin' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+User@Vinga-PC MINGW64 /d/Python/Python Developer/Git/Git_lesson_2/home_work_2/task_3 (main)
+$ git remote add origin git@github.com:Oleksandr-Pik/hw_2_task_3-8.git
+
+User@Vinga-PC MINGW64 /d/Python/Python Developer/Git/Git_lesson_2/home_work_2/task_3 (main)
+$ git branch -M main
+
+User@Vinga-PC MINGW64 /d/Python/Python Developer/Git/Git_lesson_2/home_work_2/task_3 (main)
+$ git push -u origin main
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (5/5), 407 bytes | 407.00 KiB/s, done.
+Total 5 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), done.
+To github.com:Oleksandr-Pik/hw_2_task_3-8.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+
