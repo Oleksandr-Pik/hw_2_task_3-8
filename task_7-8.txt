@@ -1,0 +1,180 @@
+$ git pull origin
+remote: Enumerating objects: 9, done.
+remote: Counting objects: 100% (8/8), done.
+remote: Compressing objects: 100% (4/4), done.
+remote: Total 6 (delta 0), reused 6 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (6/6), 1.45 KiB | 165.00 KiB/s, done.
+From https://github.com/Oleksandr-Pik/hw_2_task_3-8
+   d012c01..a27119a  main       -> origin/main
+Updating d012c01..a27119a
+Fast-forward
+ task_3-5.txt | 121 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ task_6.txt   |   1 +
+ text1.txt    |   1 +
+ text2.txt    |   1 +
+ 4 files changed, 124 insertions(+)
+ create mode 100644 task_3-5.txt
+ create mode 100644 task_6.txt
+
+User@Dell MINGW64 /d/Видеокурсы/Python/Основи використання Git/home_work_2/hw_2_task_3-8 (main)
+$ git branch
+* main
+
+User@Dell MINGW64 /d/Видеокурсы/Python/Основи використання Git/home_work_2/hw_2_task_3-8 (main)
+$ git pull origin dev
+From https://github.com/Oleksandr-Pik/hw_2_task_3-8
+ * branch            dev        -> FETCH_HEAD
+Merge made by the 'ort' strategy.
+ dev.txt  | 1 +
+ dev2.txt | 1 +
+ dev3.txt | 1 +
+ dev4.txt | 1 +
+ dev5.txt | 1 +
+ 5 files changed, 5 insertions(+)
+ create mode 100644 dev.txt
+ create mode 100644 dev2.txt
+ create mode 100644 dev3.txt
+ create mode 100644 dev4.txt
+ create mode 100644 dev5.txt
+
+User@Dell MINGW64 /d/Видеокурсы/Python/Основи використання Git/home_work_2/hw_2_task_3-8 (main)
+$ git pull origin test
+From https://github.com/Oleksandr-Pik/hw_2_task_3-8
+ * branch            test       -> FETCH_HEAD
+Merge made by the 'ort' strategy.
+ test1.html | 1 +
+ test2.html | 1 +
+ test3.html | 1 +
+ test4.html | 1 +
+ test5.html | 1 +
+ 5 files changed, 5 insertions(+)
+ create mode 100644 test1.html
+ create mode 100644 test2.html
+ create mode 100644 test3.html
+ create mode 100644 test4.html
+ create mode 100644 test5.html
+
+User@Dell MINGW64 /d/Видеокурсы/Python/Основи використання Git/home_work_2/hw_2_task_3-8 (main)
+$ git branch
+* main
+
+User@Dell MINGW64 /d/Видеокурсы/Python/Основи використання Git/home_work_2/hw_2_task_3-8 (main)
+$ git branches
+git: 'branches' is not a git command. See 'git --help'.
+
+User@Dell MINGW64 /d/Видеокурсы/Python/Основи використання Git/home_work_2/hw_2_task_3-8 (main)
+$ git checkout dev
+Switched to a new branch 'dev'
+M       text4.txt
+M       text5.txt
+branch 'dev' set up to track 'origin/dev'.
+
+User@Dell MINGW64 /d/Видеокурсы/Python/Основи використання Git/home_work_2/hw_2_task_3-8 (dev)
+$ git checkout test
+Switched to a new branch 'test'
+M       text4.txt
+M       text5.txt
+branch 'test' set up to track 'origin/test'.
+
+User@Dell MINGW64 /d/Видеокурсы/Python/Основи використання Git/home_work_2/hw_2_task_3-8 (test)
+$ git checkout main
+Switched to branch 'main'
+M       text4.txt
+M       text5.txt
+Your branch is ahead of 'origin/main' by 12 commits.
+  (use "git push" to publish your local commits)
+
+User@Dell MINGW64 /d/Видеокурсы/Python/Основи використання Git/home_work_2/hw_2_task_3-8 (main)
+$ git push origin
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 699 bytes | 699.00 KiB/s, done.
+Total 4 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 1 local object.
+To https://github.com/Oleksandr-Pik/hw_2_task_3-8.git
+   a27119a..1b54994  main -> main
+
+User@Dell MINGW64 /d/Видеокурсы/Python/Основи використання Git/home_work_2/hw_2_task_3-8 (main)
+$ git checkout dev
+Switched to branch 'dev'
+M       text4.txt
+M       text5.txt
+Your branch is up to date with 'origin/dev'.
+
+User@Dell MINGW64 /d/Видеокурсы/Python/Основи використання Git/home_work_2/hw_2_task_3-8 (dev)
+$ git push origin
+Everything up-to-date
+
+User@Dell MINGW64 /d/Видеокурсы/Python/Основи використання Git/home_work_2/hw_2_task_3-8 (dev)
+$ git add .
+
+User@Dell MINGW64 /d/Видеокурсы/Python/Основи використання Git/home_work_2/hw_2_task_3-8 (dev)
+$ git commit -m "edit file"
+[dev aae0334] edit file
+ 3 files changed, 3 insertions(+)
+
+User@Dell MINGW64 /d/Видеокурсы/Python/Основи використання Git/home_work_2/hw_2_task_3-8 (dev)
+$ git push origin
+Enumerating objects: 9, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (5/5), 405 bytes | 405.00 KiB/s, done.
+Total 5 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/Oleksandr-Pik/hw_2_task_3-8.git
+   26b0697..aae0334  dev -> dev
+
+User@Dell MINGW64 /d/Видеокурсы/Python/Основи використання Git/home_work_2/hw_2_task_3-8 (dev)
+$ git checkout test
+Switched to branch 'test'
+Your branch is up to date with 'origin/test'.
+
+User@Dell MINGW64 /d/Видеокурсы/Python/Основи використання Git/home_work_2/hw_2_task_3-8 (test)
+$ git add .
+
+User@Dell MINGW64 /d/Видеокурсы/Python/Основи використання Git/home_work_2/hw_2_task_3-8 (test)
+$ git commit -m "add new file"
+[test a819f10] add new file
+ 1 file changed, 1 insertion(+)
+ create mode 100644 text6.txt
+
+User@Dell MINGW64 /d/Видеокурсы/Python/Основи використання Git/home_work_2/hw_2_task_3-8 (test)
+$ git push origin
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 299 bytes | 299.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/Oleksandr-Pik/hw_2_task_3-8.git
+   065c1f1..a819f10  test -> test
+
+User@Dell MINGW64 /d/Видеокурсы/Python/Основи використання Git/home_work_2/hw_2_task_3-8 (test)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+User@Dell MINGW64 /d/Видеокурсы/Python/Основи використання Git/home_work_2/hw_2_task_3-8 (main)
+$ git pull origin
+remote: Enumerating objects: 7, done.
+remote: Counting objects: 100% (7/7), done.
+remote: Compressing objects: 100% (4/4), done.
+remote: Total 4 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (4/4), 1.90 KiB | 42.00 KiB/s, done.
+From https://github.com/Oleksandr-Pik/hw_2_task_3-8
+   1b54994..ba8fc55  main       -> origin/main
+Updating 1b54994..ba8fc55
+Fast-forward
+ text3.txt | 1 +
+ text4.txt | 1 +
+ text5.txt | 1 +
+ text6.txt | 1 +
+ 4 files changed, 4 insertions(+)
+ create mode 100644 text6.txt
+
+User@Dell MINGW64 /d/Видеокурсы/Python/Основи використання Git/home_work_2/hw_2_task_3-8 (main)
+$ touch task_7-8.txt
